@@ -6,7 +6,6 @@
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
     </script>
-    <meta http-equiv="Content-Security-Policy" content="default-src * 'self' style-src * 'unsafe-inline'; media-src *; img-src * 'self' data: https:; script-src * 'unsafe-inline' 'unsafe-eval'">
     <!-- COntent Security Policy ENds -->
     <meta name="msapplication-tap-highlight" content="no">
     <meta charset="utf-8">
@@ -17,10 +16,11 @@
     <link href='components/dashboard/dashboard.css' rel='stylesheet' type='text/css'>
     <link href='components/navbar/navbar-header.css' rel='stylesheet' type='text/css'>
 </head>
+
 <body ng-controller="globalCtrl" ng-cloak>
     <route-loader value="isRouteLoading"></route-loader>
     <div ng-include="'components/navbar/navbar-header.html'" ng-if="showNav"></div>
-    <div ng-view></div>
+    <div ng-view class="section"></div>
 </body>
 <!-- All Plugins  AngularJS -->
 <script type="text/javascript" src="plugins/angular-1.5.9/angular.min.js"></script>
@@ -36,6 +36,8 @@
 <script type="text/javascript" src="components/global/http-interceptors.js"></script>
 <!-- Components Ctrl -->
 <script type="text/javascript" src="components/dashboard/dashboardCtrl.js"></script>
+<script type="text/javascript" src="components/login/loginCtrl.js"></script>
 <!-- Services -->
 <script type="text/javascript" src="services/product-list.js"></script>
+
 </html>

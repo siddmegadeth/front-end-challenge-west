@@ -1,0 +1,8 @@
+nav.navbar.navbar-inverse.navbar-fixed.ng-scope {
+    border-radius: 0;
+}
+
+li.active {
+    font-size: 200;
+    font-weight: bold !important;
+}

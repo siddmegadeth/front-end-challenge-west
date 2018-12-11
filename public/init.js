@@ -12,19 +12,23 @@
     win.enable(true);
     win.info();
 
-    app.config(['$routeProvider', '$httpProvider',function($routeProvider, $httpProvider) {
+    app.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpProvider) {
 
-            $routeProvider
-                .when('/dashboard', {
-                    templateUrl: 'components/dashboard/dashboard.html',
-                    controller: 'dashboardCtrl',
-                    showNav: false                    
-                })
-                .otherwise({
-                    redirectTo: '/dashboard'
-                });
-        }
-    ]);
+        $routeProvider
+            .when('/dashboard', {
+                templateUrl: 'components/dashboard/dashboard.html',
+                controller: 'dashboardCtrl',
+                showNav: true
+            })
+            .when('/login', {
+                templateUrl: 'components/login/login.html',
+                controller: 'loginCtrl',
+                showNav: true
+            })
+            .otherwise({
+                redirectTo: '/login'
+            });
+    }]);
 
     app.run(['$rootScope', '$location', function($rootScope, $location) {
 
@@ -32,8 +36,6 @@
             $rootScope.showNav = current.showNav;
         });
 
-        $rootScope.$on('$routeChangeSuccess', function() {
-        });
+        $rootScope.$on('$routeChangeSuccess', function() {});
 
     }]);
-
