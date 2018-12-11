@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript" src="plugins/winDevice.js"></script>
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    </script>
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'self' style-src * 'unsafe-inline'; media-src *; img-src * 'self' data: https:; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <!-- COntent Security Policy ENds -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta charset="utf-8">
+    <title>Front End Challenge</title>
+    <link href='plugins/bootstrap-3.3.7-dist/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <link href='plugins/font-awesome-4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+    <!-- Components CSS -->
+    <link href='components/dashboard/dashboard.css' rel='stylesheet' type='text/css'>
+    <link href='components/navbar/navbar-header.css' rel='stylesheet' type='text/css'>
+</head>
+<body ng-controller="globalCtrl" ng-cloak>
+    <route-loader value="isRouteLoading"></route-loader>
+    <div ng-include="'components/navbar/navbar-header.html'" ng-if="showNav"></div>
+    <div ng-view></div>
+</body>
+<!-- All Plugins  AngularJS -->
+<script type="text/javascript" src="plugins/angular-1.5.9/angular.min.js"></script>
+<script type="text/javascript" src="plugins/angular-1.5.9/angular-route.min.js"></script>
+<script type="text/javascript" src="plugins/angular-1.5.9/angular-touch.min.js"></script>
+<script type="text/javascript" src="plugins/angular-1.5.9/angular-animate.min.js"></script>
+<script type="text/javascript" src="plugins/ui-bootstrap-tpls-2.5.0.min.js"></script>
+<!-- Below App Level Controllers and Init Files -->
+<script type="text/javascript" src="init.js"></script>
+<!-- Global Ctrl -->
+<script type="text/javascript" src="components/global/globalCtrl.js"></script>
+<script type="text/javascript" src="components/global/global-directives.js"></script>
+<script type="text/javascript" src="components/global/http-interceptors.js"></script>
+<!-- Components Ctrl -->
+<script type="text/javascript" src="components/dashboard/dashboardCtrl.js"></script>
+<!-- Services -->
+<script type="text/javascript" src="services/product-list.js"></script>
+</html>
