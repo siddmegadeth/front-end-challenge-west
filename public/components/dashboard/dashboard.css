@@ -21,8 +21,8 @@ active {
 }
 
 .cards-offer {
-    top: 10%;
-    left: 4%;
+    top: 14%;
+    left: 6%;
     width: 32%;
     height: auto;
     background: #03A9F4;
@@ -98,3 +98,82 @@ img:hover {
     background-color: #55aced !important;
     border-color: #55aced !important;
 }
+
+
+
+/*Product Detail Page CSS*/
+.product-container {
+    height: 90%;
+    width: 100%;
+    display: inline-block;
+}
+
+.inline {
+    display: inline-block;
+    font-size: small;
+}
+
+.offer {
+    display: inline-block;
+    width: 44%;
+    border: 1px dashed #889096;
+    padding: 0;
+    position: absolute;
+    left: 22%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+
+.height-19 {
+    height: 19%;
+
+}
+
+.product-price {
+
+    /* width: 89%; */
+    width: 95%;
+    height: 22%;
+    background: #242627;
+    position: absolute;
+    border: 1px solid #282828;
+    display: inline-block;
+    color: white;
+    font-size: xx-large;
+    z-index: 999;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-right: 1%;
+    padding-left: 1%;
+    top: 76%;
+}
+
+.ratings {
+    width: 100%;
+    top: 4%;
+    position: relative;
+}
+
+.offer-1st {
+    top: 8%;
+    position: absolute;
+}
+
+
+.stars {
+    display: inline-block;
+    width: 40%;
+}
+
+.social {
+    display: inline-block;
+    width: 45%;
+    top: -2%;
+    position: absolute;
+}
+
+
+
+
+
