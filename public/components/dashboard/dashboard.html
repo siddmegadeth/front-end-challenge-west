@@ -1,16 +1,27 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-4 col-xs-4" ng-repeat="p in productList.groups">
-            <div class="cards">
-                <div class="cards-offer">
-                    {{p.messages[0]}}
-                </div>
-                <div class='cards-content'>
-                    <img  class="img-thumbnail" ng-src="{{p.hero.href}}" alt="Card image cap" >
-                    <div>
-                        <p>{{p.name}}.</p>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" ng-repeat="p in productList.groups">
+            <div class="panel-group">
+                <a href ng-click="gotoProductDetails($index,p)">
+                    <div class="panel panel-info">
+                        <div class="panel-heading card-header text-center">{{p.name}}</div>
+                        <div class="panel-body" title={{p.name}}>
+                        <div class="cards-offer">
+                        {{p.messages[0]}}
+                        </div>
+                        <div class="cards-price">
+                        {{p.priceRange.selling.high}}&nbsp;<i class="fa fa-usd fa-1x" aria-hidden="true"></i>
+                        <!-- Ratings -->
+                        
+                        <button class="btn btn-primary pull-right cards-cart-button">
+                        <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                        &nbsp;Add To Cart
+                        </button>
+                        </div>
+                        <img  class="img-thumbnail hero-image" ng-src="{{p.hero.href}}" alt="Card image cap" >
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </div>
