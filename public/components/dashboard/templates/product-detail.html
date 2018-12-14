@@ -4,7 +4,7 @@
             <div uib-slide ng-repeat="slide in productDetail.images track by $index" active="active" index="$index">
                 <img ng-src="{{slide.href}}" style="margin:auto;">
                 <div class="carousel-caption">
-                   <!--  <h4>Slide {{slide.id}}</h4>
+                    <!--  <h4>Slide {{slide.id}}</h4>
                     <p>{{slide.text}}</p> -->
                 </div>
             </div>
@@ -15,20 +15,20 @@
     </div>
     <div class="product-container height-19">
         <div class="product-price">
-          <div class="price">
-            {{productDetail.priceRange.selling.high}}&nbsp;<i class="fa fa-usd fa-1x" aria-hidden="true"></i>
-          </div>
+            <div class="price">
+                {{productDetail.priceRange.selling.high}}&nbsp;<i class="fa fa-usd fa-1x" aria-hidden="true"></i>
+            </div>
             <!-- Ratings -->
             <div class="offer">
                 <a href class="inline offer-text">{{productDetail.messages[0]}}</a>
                 <a href class="inline offer-text">{{productDetail.messages[1]}}</a>
             </div>
             <div class="cart-button">
-            <button class="btn btn-primary pull-right cards-cart-button">
-                <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                &nbsp;Add To Cart
-            </button>
-          </div>
+                <button class="btn btn-primary pull-right cards-cart-button">
+                    <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                    &nbsp;Add To Cart
+                </button>
+            </div>
             <div class="ratings">
                 <div class="stars">
                     <h6>Overall Rating</h6>

@@ -1,8 +1,21 @@
 app.controller('dashboardCtrl', ['$scope', 'productService', '$location', '$uibModal', function($scope, productService, $location, $uibModal) {
 
     var index = 0;
+    $scope.productList = [];
+
     productService.getList(function(resp) {
-        $scope.productList = resp;
+
+
+        // Filter out Special Charecters From Name
+        var i = 0;
+        resp.groups.forEach(function(tuple) {
+            log(tuple);
+            tuple.name = tuple.name.slice(tuple.name.indexOf("#") + 7);
+            $scope.productList.push(tuple);
+            log($scope.productList);
+
+        });
+
 
     }, function(err) {
         error(err);
@@ -31,19 +44,3 @@ app.controller('dashboardCtrl', ['$scope', 'productService', '$location', '$uibM
     }
 
 }]);
-
-// $scope.productId = productService.getProductId();
-
-//     if (!$scope.productId) {
-//         $uibModal.open({
-//                 template: "<div><h1 class='text-center'>You Have Not Selected Any Product</h1><h5 class='text-center'><a href>Redirecting To Dashboard</a></h5></div>",
-//             })
-//             .closed.then(function() {
-//                 $location.path('dashboard');
-//             });
-
-//     } else {
-//         log($scope.productId)
-
-
-//     }
