@@ -4,13 +4,16 @@ app.controller('dashboardCtrl', ['$scope', 'productService', '$location', '$uibM
     $scope.productList = [];
 
     productService.getList(function(resp) {
-
+        log(resp);
 
         // Filter out Special Charecters From Name
         var i = 0;
         resp.groups.forEach(function(tuple) {
             log(tuple);
+            tuple.nameAttribute = tuple.name.slice(0,tuple.name.indexOf(";")-1);
             tuple.name = tuple.name.slice(tuple.name.indexOf("#") + 7);
+            tuple.nameAttribute = tuple.name.slice(tuple.name.indexOf("#") + 7);
+
             $scope.productList.push(tuple);
             log($scope.productList);
 
