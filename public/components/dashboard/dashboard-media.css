@@ -1,6 +1,32 @@
 
 
-@media only screen and (min-width: 320px) {
+@media only screen and (max-width: 1000px) {
+
+
+    .cards-offer {
+        top: 18%;
+        left: 9%;
+        width: 34%;
+        height: 22%;
+        background: #03A9F4;
+        position: absolute;
+        border: 1px solid #03A9F4;
+        display: inline-block;
+        color: white;
+        font-size: medium;
+        z-index: 999;
+        border-radius: 3px;
+    }
+
+    .product-price {
+        top: 62%;
+    }
+
+
+}
+
+
+@media only screen and (max-width: 450px) {
     .product-name {
         position: absolute;
         top: -2%;
@@ -14,22 +40,23 @@
     }
 
     .offer {
-        display: inline-block;
-        width: 77%;
+        display: inherit;
+        width: 76%;
         border: 1px dashed #889096;
         padding: 0;
         position: absolute;
-        left: 22%;
+        left: 24%;
         padding-left: 1%;
         padding-right: 1%;
+        top: 3%;
     }
 
     .cart-button {
         display: inherit;
-        left: 25%;
+        left: 21%;
         text-align: center;
         position: absolute;
-        top: 23%;
+        top: 31%;
     }
 
     .product-price {
@@ -40,15 +67,16 @@
 
     .ratings {
         width: 100%;
-        top: 13%;
+        top: 20%;
         height: 82%;
         position: relative;
+        font-size: small;
     }
 
     .social {
         display: inline-block;
         width: 100%;
-        top: 47%;
+        top: 36%;
         position: absolute;
     }
 
