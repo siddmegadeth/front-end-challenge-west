@@ -1,10 +1,49 @@
-app.controller('dashboardCtrl', ['$scope', 'product', function($scope, product) {
+app.controller('dashboardCtrl', ['$scope', 'productService', '$location', '$uibModal', function($scope, productService, $location, $uibModal) {
 
-    product.getList(function(resp) {
+    var index = 0;
+    $scope.productList = [];
+
+    productService.getList(function(resp) {
         log(resp);
-        $scope.productList = resp;
+
+        // Filter out Special Charecters From Name
+        var i = 0;
+        resp.groups.forEach(function(tuple) {
+            log(tuple);
+            tuple.nameAttribute = tuple.name.slice(0,tuple.name.indexOf(";")-1);
+            tuple.name = tuple.name.slice(tuple.name.indexOf("#") + 7);
+            tuple.nameAttribute = tuple.name.slice(tuple.name.indexOf("#") + 7);
+
+            $scope.productList.push(tuple);
+            log($scope.productList);
+
+        });
+
+
     }, function(err) {
         error(err);
     });
+
+    $scope.gotoProductDetails = function(index, product) {
+
+        productService.setProductId(product);
+        $uibModal.open({
+                templateUrl: "components/dashboard/templates/product-detail.html",
+                controller: ['productService', '$scope', function(productService, $scope) {
+
+                    $scope.rate = 2;
+                    $scope.max = 5;
+
+                    $scope.myInterval = 3000;
+                    $scope.noWrapSlides = false;
+                    $scope.activeSlide = 0;
+                    $scope.productDetail = productService.getProductId(product);
+                    log($scope.productDetail);
+                }]
+            })
+            .closed.then(function() {
+
+            });
+    }
 
 }]);

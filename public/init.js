@@ -12,7 +12,7 @@
     win.enable(true);
     win.info();
 
-    app.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpProvider) {
+    app.config(['$routeProvider', '$httpProvider','$locationProvider', function($routeProvider, $httpProvider,$locationProvider) {
 
         $routeProvider
             .when('/dashboard', {
@@ -23,6 +23,11 @@
             .when('/login', {
                 templateUrl: 'components/login/login.html',
                 controller: 'loginCtrl',
+                showNav: true
+            })
+            .when('/product-detail', {
+                templateUrl: 'components/product-detail/product-detail.html',
+                controller: 'productDetailCtrl',
                 showNav: true
             })
             .otherwise({

@@ -1,27 +1,191 @@
-.cards {
-    width: fit-content;
-    padding-left: 2%;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    padding-right: 2%;
-    border: 1px solid #d2d6d8;
-    position: relative;
-    color: white;
-    margin-bottom: 2%;
+a {
+    text-decoration: none;
+}
+
+a:hover,
+active {
+    text-decoration: none;
+}
+
+.card-header {
+    font-size: large;
+    border-bottom-color: transparent;
+    overflow: hidden;
+    white-space: nowrap;
+    color: black;
+    background: white;
+}
+
+.hero-image {
+    width: 100%;
 }
 
 .cards-offer {
-    top: 4%;
-    width: 32%;
-    height: auto;
+   top: 15%;
+    left: 7%;
+    width: 34%;
+    height: 22%;
     background: #03A9F4;
-    left: 64%;
     position: absolute;
     border: 1px solid #03A9F4;
-    border-radius: 4%;
+    display: inline-block;
+    color: white;
+    font-size: medium;
+    z-index: 999;
+    border-radius: 3px;
+}
+
+.cards-cart-button {
+    background: #ea4c4c;
+    border-color: #ea4c4c;
+
+}
+
+.cards-cart-button:hover,
+active {
+    background: #f54949;
+    border-color: #f54949;
+
+}
+
+.cards-price {
+    top: 84%;
+    left: 4%;
+    /* width: 89%; */
+    width: 91%;
+    height: auto;
+    background: #242627;
+    position: absolute;
+    border: 1px solid #484848;
+    display: inline-block;
+    color: white;
+    font-size: xx-large;
+    z-index: 999;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-right: 1%;
+    padding-left: 1%;
+}
+
+
+/*Img Hover CSS*/
+img {
+    /* filter: url(filters.svg#grayscale); Firefox 3.5+ */
+    filter: gray;
+    /* IE5+ */
+    -webkit-filter: grayscale(1);
+    /* Webkit Nightlies & Chrome Canary */
+    -webkit-transition: all .8s ease-in-out;
+}
+
+img:hover {
+    filter: none;
+    -webkit-filter: grayscale(0);
+    -webkit-transform: scale(1.01);
+}
+
+
+/*overwrite Panel*/
+.panel.panel-info {
+    border: 1px solid #3e3c3c;
+}
+
+.panel-body {
+    padding: 0;
+}
+
+.panel-heading {
+    color: white !important;
+    background-color: #55aced !important;
+    border-color: #55aced !important;
+}
+
+
+
+/*Product Detail Page CSS*/
+.product-container {
+    height: 90%;
+    width: 100%;
     display: inline-block;
 }
 
-.img-thumbnail {
-    border: none;
+.inline {
+    display: inline-block;
+    font-size: small;
 }
+
+.offer {
+    display: inline-block;
+    width: 44%;
+    border: 1px dashed #889096;
+    padding: 0;
+    position: absolute;
+    left: 22%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.offer-text
+{
+    position: relative;
+    display: block;
+}
+
+
+.height-19 {
+    height: 19%;
+
+}
+
+.product-price {
+
+    /* width: 89%; */
+    width: 95%;
+    height: 22%;
+    background: #242627;
+    position: absolute;
+    border: 1px solid #282828;
+    display: inline-block;
+    color: white;
+    font-size: xx-large;
+    z-index: 999;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-right: 1%;
+    padding-left: 1%;
+    top: 67%;
+}
+
+.ratings {
+    width: 100%;
+    top: 4%;
+    position: relative;
+}
+
+
+.stars {
+    display: inline-block;
+    width: 40%;
+    font-size: medium;
+
+}
+
+.social {
+    display: inline-block;
+    width: 70%;
+    top: -2%;
+    position: absolute;
+    font-size: medium;
+}
+
+.price
+{
+    display: inline-block;
+}
+
+.cart-button
+{
+    display: contents;
+}
+
+

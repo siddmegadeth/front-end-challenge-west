@@ -1,0 +1,53 @@
+html,
+body {}
+
+.modal-content {
+    height: -webkit-fill-available;
+}
+
+.container-fluid.ng-scope {
+    padding-top: 2%;
+}
+
+
+.navbar-collapse.collapse {
+    display: block !important;
+}
+
+.navbar-nav>li,
+.navbar-nav {
+    float: left !important;
+}
+
+.navbar-nav.navbar-right:last-child {
+    margin-right: -15px !important;
+}
+
+.navbar-right {
+    float: right !important;
+}
+
+
+
+@media only screen and (max-width: 450px) {
+
+    /*Temp Stsyling For Navbar*/
+    nav.navbar.navbar-default.navbar-fixed-top.ng-scope {
+        height: 6%;
+    }
+
+
+    ul.nav.navbar-nav.navbar-right {
+        position: absolute;
+        top: 0;
+        left: 68%;
+        width: 38%;
+    }
+
+    ul.nav.navbar-nav {
+        position: absolute;
+        top: 0;
+        left: 31%;
+    }
+
+}
