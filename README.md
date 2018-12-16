@@ -11,7 +11,7 @@
 ## Getting Started
 	Install Nodejs /Git Application Application can be run on http://localhost:3000
 
-### Installing
+### Installation
 
 clone or download zip file from this Git Repository and unzip or clone into respective directory and open CMD
 ```
@@ -23,4 +23,3 @@ clone or download zip file from this Git Repository and unzip or clone into resp
 
 ```
 
-### Installing
